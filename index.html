@@ -10,58 +10,37 @@
       font-family: 'Roboto Mono', monospace;
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #0A0A1B, #3B3D64, #51A7D4); /* Deep blue, space-inspired gradient */
+      background: linear-gradient(135deg, #0A0A1B, #3B3D64, #51A7D4);
       color: #f3f4f6;
     }
     header {
-      background-color: #1A1C2C; /* Dark space-like background */
+      background-color: #1A1C2C;
       color: #ffffff;
-      padding: 50px;
+      padding: 30px;
       text-align: center;
       font-family: 'Orbitron', sans-serif;
-      text-shadow: 0 0 10px rgba(0, 204, 255, 0.8), 0 0 20px rgba(0, 204, 255, 0.7); /* Glowing cyan text effect */
     }
     header h1 {
-      font-size: 3.5em;
+      font-size: 3em;
       margin: 0;
-      letter-spacing: 2px;
-    }
-    header p {
-      font-size: 1.1em;
-      color: #ccc;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow-x: auto; /* Allows horizontal scrolling */
-      white-space: nowrap;
-      max-width: 100%;
-    }
-    header p span {
-      white-space: nowrap; /* Prevents wrapping */
-      overflow: hidden;
-      text-overflow: ellipsis; /* Adds "..." if needed */
-      display: inline-block;
-      max-width: 100%;
     }
     header img {
-      width: 60px;
-      margin-right: 10px;
-      vertical-align: middle;
+      width: 100px;
+      max-width: 100%;
+      height: auto;
     }
     nav {
       display: flex;
       justify-content: center;
-      background-color: #0A0A1B; /* Dark background */
+      background-color: #0A0A1B;
       padding: 15px 0;
     }
     nav a {
       color: #fff;
       text-decoration: none;
       padding: 15px 25px;
-      text-transform: uppercase;
       font-weight: 600;
-      letter-spacing: 1px;
-      transition: background-color 0.3s ease;
+      transition: background 0.3s;
     }
     nav a:hover {
       background-color: #51A7D4;
@@ -73,18 +52,10 @@
       background-color: #1A1C2C;
       border-top: 2px solid #51A7D4;
     }
-    .game-thumbnail {
-      display: inline-block;
-      margin: 20px;
-      text-align: center;
-      background-color: #333;
-      padding: 20px;
+    img {
+      max-width: 100%;
+      height: auto;
       border-radius: 10px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-      transition: transform 0.2s ease;
-    }
-    .game-thumbnail:hover {
-      transform: scale(1.05);
     }
     .team-row {
       display: flex;
@@ -92,14 +63,27 @@
       flex-wrap: wrap;
       gap: 20px;
     }
-    .team-row .team-member {
-      flex-basis: 22%;
+    .team-member img {
+      width: 150px;
+      height: auto;
+      border-radius: 50%;
+    }
+    .game-thumbnail {
+      display: inline-block;
+      margin: 20px;
+      background-color: #333;
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.2s ease;
+    }
+    .game-thumbnail:hover {
+      transform: scale(1.05);
     }
 
-    /* Media Query for Mobile */
+    /* Mobile View */
     @media screen and (max-width: 768px) {
       header h1 {
-        font-size: 2.2em;
+        font-size: 2em;
       }
       nav {
         display: block;
@@ -109,27 +93,26 @@
         display: block;
         padding: 10px;
       }
+      .team-row {
+        flex-direction: column;
+        align-items: center;
+      }
+      .team-member {
+        width: 90%;
+      }
       .game-thumbnail {
-        display: block;
         width: 90%;
         margin: 15px auto;
-      }
-      .team-row {
-        display: block;
-        text-align: center;
-      }
-      .team-row .team-member {
-        width: 90%;
-        margin: 10px auto;
       }
     }
   </style>
 </head>
 <body>
+
   <header>
     <img src="SocksLogo.jpg" alt="Socks Logo">
     <h1>$SOCKS MothersDog</h1>
-    <p>Our Contract Address: <span style="color: #51A7D4;">3DFU4Z2N2Uyh5KxU9xgKM2u5LsPYU7m2DVKDoPYuFvEL</span></p>
+    <p>Contract Address: <span style="color: #51A7D4;">3DFU4Z2N2Uyh5KxU9xgKM2u5LsPYU7m2DVKDoPYuFvEL</span></p>
   </header>
 
   <nav>
@@ -141,42 +124,32 @@
 
   <section id="home">
     <h2>About Us</h2>
-    <p>🐾 Meet $SOCKS <br> @MothersDogSocks <br> the meme token with purpose, inspired by Iggy Azalea’s dog! Combining memes, gaming, & real play-to-earn rewards.</p>
+    <p>🐾 Meet $SOCKS @MothersDogSocks, the meme token with purpose!</p>
     <img src="Socks Meme.jpg" alt="Socks Meme">
     <img src="Socks post.jpeg" alt="Socks Post">
-
-    <div class="social-buttons">
-      <h3>Follow Us:</h3>
-      <a href="https://x.com/MothersDogSocks" target="_blank">Follow on X</a>
-      <a href="https://dexscreener.com/solana/epfafgy1wzxlgkffwqukio3eo83mxeqiem4zpzfwkj8e" target="_blank">View on DexScreener</a>
-      <a href="https://solscan.io/token/3DFU4Z2N2Uyh5KxU9xgKM2u5LsPYU7m2DVKDoPYuFvEL?page=6#holders" target="_blank">View on SolScan</a>
-    </div>
   </section>
 
   <section id="games">
     <h2>Our Games</h2>
     <div class="game-thumbnail">
       <button onclick="location.href='https://your-github-link-to-socks-pump'">Socks Pump</button>
-      <button onclick="location.href='leaderboard1.html'">Leaderboard</button>
     </div>
     <div class="game-thumbnail">
       <button onclick="location.href='https://your-github-link-to-jumping-socks'">Jumping Socks</button>
-      <button onclick="location.href='leaderboard2.html'">Leaderboard</button>
     </div>
     <div class="game-thumbnail">
       <button onclick="location.href='https://your-github-link-to-socks-runner'">Socks Runner</button>
-      <button onclick="location.href='leaderboard3.html'">Leaderboard</button>
     </div>
   </section>
 
-  <section id="team" class="team-section">
+  <section id="team">
     <h2>Meet the Team</h2>
-    <div class="team-member">
-      <img src="Guacdoodle.jpg" alt="Guacdoodle">
-      <h3>Guacdoodle</h3>
-      <p>CTO LEAD</p>
-    </div>
     <div class="team-row">
+      <div class="team-member">
+        <img src="Guacdoodle.jpg" alt="Guacdoodle">
+        <h3>Guacdoodle</h3>
+        <p>CTO LEAD</p>
+      </div>
       <div class="team-member">
         <img src="Todd.jpg" alt="Todd">
         <h3>Todd</h3>
