@@ -29,9 +29,22 @@
     header p {
       font-size: 1.1em;
       color: #ccc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow-x: auto; /* Allows horizontal scrolling */
+      white-space: nowrap;
+      max-width: 100%;
+    }
+    header p span {
+      white-space: nowrap; /* Prevents wrapping */
+      overflow: hidden;
+      text-overflow: ellipsis; /* Adds "..." if needed */
+      display: inline-block;
+      max-width: 100%;
     }
     header img {
-      width: 60px; /* Logo size */
+      width: 60px;
       margin-right: 10px;
       vertical-align: middle;
     }
@@ -51,14 +64,14 @@
       transition: background-color 0.3s ease;
     }
     nav a:hover {
-      background-color: #51A7D4; /* Light cyan */
+      background-color: #51A7D4;
       border-radius: 5px;
     }
     section {
       padding: 50px 20px;
       text-align: center;
-      background-color: #1A1C2C; /* Dark background */
-      border-top: 2px solid #51A7D4; /* Accent line */
+      background-color: #1A1C2C;
+      border-top: 2px solid #51A7D4;
     }
     .game-thumbnail {
       display: inline-block;
@@ -73,66 +86,6 @@
     .game-thumbnail:hover {
       transform: scale(1.05);
     }
-    .game-thumbnail button {
-      padding: 12px 30px;
-      background-color: #1A1C2C; /* Dark background */
-      color: #fff;
-      font-size: 1em;
-      border: 2px solid #51A7D4;
-      border-radius: 8px;
-      cursor: pointer;
-      margin-top: 10px;
-      transition: transform 0.2s ease, background-color 0.3s;
-    }
-    .game-thumbnail button:hover {
-      background-color: #51A7D4; /* Cyan button hover */
-      transform: scale(1.05);
-    }
-    .game-thumbnail button:active {
-      transform: scale(0.98);
-    }
-    .game-thumbnail button + button {
-      margin-top: 5px;
-      background-color: #444;
-    }
-    .game-thumbnail button + button:hover {
-      background-color: #555;
-    }
-    img {
-      width: 250px;
-      margin: 10px;
-      border-radius: 10px;
-    }
-    .team-section {
-      background-color: #2A2D3C;
-      padding: 50px;
-    }
-    .team-member {
-      display: inline-block;
-      margin: 20px;
-      text-align: center;
-      background-color: #444;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-      transition: transform 0.2s ease;
-    }
-    .team-member:hover {
-      transform: scale(1.05);
-    }
-    .team-member img {
-      width: 150px;
-      border-radius: 50%;
-      margin-bottom: 15px;
-    }
-    .team-member h3 {
-      color: #51A7D4;
-      font-size: 1.3em;
-    }
-    .team-member p {
-      color: #ccc;
-      font-size: 1.1em;
-    }
     .team-row {
       display: flex;
       justify-content: center;
@@ -142,25 +95,8 @@
     .team-row .team-member {
       flex-basis: 22%;
     }
-    .social-buttons {
-      margin-top: 20px;
-      text-align: center;
-    }
-    .social-buttons a {
-      padding: 10px 25px;
-      background-color: #444;
-      color: #fff;
-      text-decoration: none;
-      font-size: 1.1em;
-      border-radius: 5px;
-      margin: 5px;
-      transition: background-color 0.3s ease;
-    }
-    .social-buttons a:hover {
-      background-color: #51A7D4; /* Cyan button hover */
-    }
 
-    /* Media Query for Mobile Responsiveness */
+    /* Media Query for Mobile */
     @media screen and (max-width: 768px) {
       header h1 {
         font-size: 2.2em;
@@ -178,9 +114,6 @@
         width: 90%;
         margin: 15px auto;
       }
-      .game-thumbnail button {
-        width: 100%;
-      }
       .team-row {
         display: block;
         text-align: center;
@@ -188,12 +121,6 @@
       .team-row .team-member {
         width: 90%;
         margin: 10px auto;
-      }
-      .social-buttons a {
-        display: block;
-        margin: 10px auto;
-        width: 80%;
-        text-align: center;
       }
     }
   </style>
@@ -218,7 +145,6 @@
     <img src="Socks Meme.jpg" alt="Socks Meme">
     <img src="Socks post.jpeg" alt="Socks Post">
 
-    <!-- Social Media Links -->
     <div class="social-buttons">
       <h3>Follow Us:</h3>
       <a href="https://x.com/MothersDogSocks" target="_blank">Follow on X</a>
