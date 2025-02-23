@@ -16,18 +16,31 @@
     header {
       background-color: #1A1C2C;
       color: #ffffff;
-      padding: 30px;
+      padding: 20px;
       text-align: center;
       font-family: 'Orbitron', sans-serif;
     }
-    header h1 {
-      font-size: 3em;
-      margin: 0;
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
     header img {
       width: 100px;
       max-width: 100%;
       height: auto;
+    }
+    .contract-address {
+      font-size: 1rem;
+      max-width: 90%;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      text-align: center;
+      margin-top: 10px;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
     }
     nav {
       display: flex;
@@ -104,15 +117,21 @@
         width: 90%;
         margin: 15px auto;
       }
+      .contract-address {
+        font-size: 0.9rem;
+        padding: 8px;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="SocksLogo.jpg" alt="Socks Logo">
-    <h1>$SOCKS MothersDog</h1>
-    <p>Contract Address: <span style="color: #51A7D4;">3DFU4Z2N2Uyh5KxU9xgKM2u5LsPYU7m2DVKDoPYuFvEL</span></p>
+    <div class="logo-container">
+      <img src="SocksLogo.jpg" alt="Socks Logo">
+      <h1>$SOCKS MothersDog</h1>
+      <p class="contract-address">Contract Address: <span style="color: #51A7D4;">3DFU4Z2N2Uyh5KxU9xgKM2u5LsPYU7m2DVKDoPYuFvEL</span></p>
+    </div>
   </header>
 
   <nav>
